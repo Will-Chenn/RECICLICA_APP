@@ -1,12 +1,15 @@
 {
   "root": true,
   "ignorePatterns": ["projects/**/*"],
+  "ignorePatterns": [".eslintrc.js"],
   "overrides": [
     {
       "files": ["*.ts"],
       "parserOptions": {
-        "project": ["tsconfig.json"],
-        "createDefaultProgram": true
+        "project": ["/tsconfig.json"],
+        "tscotsconfigRootDir": "__dirname",
+        "createDefaultProgram": true,
+        "sourceType": "module",
       },
       "extends": [
         "plugin:@angular-eslint/recommended",
